@@ -17,6 +17,35 @@
 		body {
   		margin-bottom: 60px; /* Margin bottom by footer height */
 		}
+		#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 4.5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 4.5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 4.5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 4.5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        height:00px;
+        width: 0px;
+        overflow:hidden;
+        background: none;
+        background-size: 0px:
+        display:none;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+    	overflow:hidden;
+        height:00px;
+        width: 0px;
+        visibility:hidden;
+    }
+}
 	</style>
 </head>
 <body style="background: #eeeeee" ng-app="guestBook">
@@ -31,11 +60,13 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="container-fluid p-5 text-center" style="background: url('client/header.jpeg');  background-size: cover;     background-position: center; ">
-		<div class="container p-5 col-sm-6" style="background:rgba(255, 255, 255, .2)" >
+	<div id="hideMe">
+	<div class="container-fluid p-5 text-center" style="background: url('client/header.jpeg');  background-size: cover;     background-position: center;">
+		<div class="container p-5 col-sm-6 animated bounceOutUp delay-4s" style="background:rgba(255, 255, 255, .2)" >
 			<h2 class="animated fadeInDown">The Ultimate Guest Book</h2>
 			<p class="animated fadeInUp delay-1s">Got a comment or concern?<br> This is the place for you!</p>
 		</div>
+	</div>
 	</div>
 	
 	<div ui-view>
