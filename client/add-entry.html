@@ -5,20 +5,22 @@
 		Preview: <br>
 		<div class="row justify-content-center" >
 		<div class="card card-body col-sm-3 p-3 m-3 " style="background: #ffffff;">
-		<i class="fas fa-quote-left"></i><br>
-		<blockquote>
-			{{newentry}}
-		</blockquote>
-		<i class="fas fa-quote-right" style="float: right;"></i><br>
-		<footer><i class="far fa-user-circle"></i> Anonymous</footer>
+			<i class="fas fa-quote-left"></i><br>
+			<blockquote>
+				{{newentry}}
+			</blockquote>
+			<i class="fas fa-quote-right" style="float: right;"></i><br>
+			<footer><i class="far fa-user-circle"></i> Anonymous</footer>
 		</div>
 		</div>
 		<br>
-		<form style="border: 1px solid black;">
-			<textarea ng-model="newentry"></textarea>
-			<br>
-			<button class="btn btn-dark">Submit</button>
-		</form>
+		<div class="row justify-content-center w-100" >
+			<form class="w-100" >
+				<textarea ng-model="newentry" class="w-100"></textarea>
+				<br>
+				<button class="btn btn-dark" ng-click="submitentry()">Submit</button>
+			</form>
+		</div>
 	</div>
 	</div>
 	</div>
