@@ -15,7 +15,10 @@ guestBook.config(function($stateProvider, $urlRouterProvider) {
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('add-entry', {
             url: '/add',
-            templateUrl: 'client/add-entry.html'     
+            templateUrl: 'client/add-entry.html',
+            controller: function($scope) {
+            $scope.newentry = "Type In A New Entry";
+        } 
         });
 
 });
